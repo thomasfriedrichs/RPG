@@ -1,4 +1,4 @@
-export {storeState,changeState,knightAttack,archerAttack,mageAttack}
+export {storeState,changeState,knightAttack,archerAttack,mageAttack,knight,archer,mage}
 
 const storeState = (initialState) => {
   let currentState = initialState; 

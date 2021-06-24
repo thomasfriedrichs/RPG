@@ -7,29 +7,27 @@ import * as game from "./js/game.js";
 $(document).ready(function () {
     $('#userNew').submit(function(event) {
       event.preventDefault();
-      
-        
-      
-      
-
-
-      
-      
       const userName = $("#userInput").val();
+      let newCharacter;
 
-    switch (selection) {
+    switch ($("#character option:selected").val()) {
       case "mage":
-        const newMage = storeState(mage);
+        newCharacter = game.storeState(game.mage);
         break;
       case "archer":
-        const newArcher = storeState(archer);
+        newCharacter = game.storeState(game.archer);
         break;
       case "knight": 
-        const newKnight = storeState(knight);
+        newCharacter = game.storeState(game.knight);
         break;
     }
-      const userName = $("#userInput").val();
-    }
-  );
-})
-  
+
+    console.log(newCharacter);
+
+    $('#show-state').click(function() {
+      const currentState = selection();
+      $('#showNewCharacter').text(userName);
+      $('#showAbilities').text()
+    });
+  });
+});

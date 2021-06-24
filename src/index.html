@@ -3,7 +3,7 @@
   <head>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
       integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="Main.js"></script>
+    <script type="text/javascript" src="main.js"></script>
     <title>RPG</title>
   </head>
 
@@ -12,12 +12,22 @@
       <div>
         <form id="userNew">
           <input type="text" id="userInput" class="form-control">
+          <select name="character" id="character">
+            <option value="knight">Knight</option>
+            <option value="archer">Archer</option>
+            <option value="mage">Mage</option>
+          </select>
           <button type="submit">Submit</button>
         </form>
       </div>
 
+      <h1>Your Characters's Stats</h1>
+      <h3><div id="stats"></div></h3>
+
+      
       <div>
         <p id="showNewCharacter"></p>
+        <p id="showAbilities"></p>
       </div>
     </div>
   </body>
